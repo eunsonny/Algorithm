@@ -4,7 +4,7 @@
 
 // You may assume the integer does not contain any leading zero, except the number 0 itself.
 
- 
+
 
 // Example 1:
 
@@ -23,26 +23,26 @@
 
 // answer
 
-var plusOne = function(digits) {
+var plusOne = function (digits) {
   const length = digits.length;
-  let i = length -1;
+  let i = length - 1;
   let count = 0;
   while (digits[i] === 9) {
     count++;
     i--;
   }
-   if (count === 0) {
-     digits[length-1] = digits[length-1] +1
-   } else {
-     for (let j = 1; j <= count; j++) {
-       digits[length-j] = 0;
-     }
-     length === count
+  if (count === 0) {
+    digits[length - 1] = digits[length - 1] + 1
+  } else {
+    for (let j = 1; j <= count; j++) {
+      digits[length - j] = 0;
+    }
+    length === count
       ? digits.unshift(1)
-     :digits[length-count-1] = digits[length-count-1] +1;
-   }
-   return digits
- };
+      : digits[length - count - 1] = digits[length - count - 1] + 1;
+  }
+  return digits
+};
 
  // 뒷자리부터 체크하여 9가 몇 개 있는 지를 체크한다.
  // 그리고 배열의 길이와 9의 갯수에 따라, 처리 방식을 정리한다.
