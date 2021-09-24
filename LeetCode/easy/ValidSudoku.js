@@ -79,4 +79,3 @@ var isValidSudoku = function (board) {
   const result = total.map((arr) => check(arr))
   return result.every(value => value === true)
 };
-
